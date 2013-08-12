@@ -11,8 +11,8 @@ Examples:
 |1|39.0|normal|
 |1|39.8|high|
 |2|40.0|low|
-|2|42.2|low|
+|2|42.2|normal|
 |2|43.8|high|
 |3|35.2|low|
-|3|36.6|high|
+|3|36.6|normal|
 |3|38.0|high|

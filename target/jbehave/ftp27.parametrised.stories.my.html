@@ -23,13 +23,13 @@
 <tr>
 <td>2</td><td>40.0</td><td>low</td></tr>
 <tr>
-<td>2</td><td>42.2</td><td>low</td></tr>
+<td>2</td><td>42.2</td><td>normal</td></tr>
 <tr>
 <td>2</td><td>43.8</td><td>high</td></tr>
 <tr>
 <td>3</td><td>35.2</td><td>low</td></tr>
 <tr>
-<td>3</td><td>36.6</td><td>high</td></tr>
+<td>3</td><td>36.6</td><td>normal</td></tr>
 <tr>
 <td>3</td><td>38.0</td><td>high</td></tr>
 </tbody>
@@ -55,10 +55,10 @@
 <div class="step successful">When patient temperature is <span class="step parameter">40.0</span></div>
 <div class="step successful">Then temperature is <span class="step parameter">low</span></div>
 
-<h3 class="example">Example: {patient=2, temperature=42.2, result=low}</h3>
+<h3 class="example">Example: {patient=2, temperature=42.2, result=normal}</h3>
 <div class="step successful">Given a patient is <span class="step parameter">2</span></div>
 <div class="step successful">When patient temperature is <span class="step parameter">42.2</span></div>
-<div class="step failed">Then temperature is <span class="step parameter">low</span> <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;[low]&gt; but was:&lt;[normal]&gt;</span></div>
+<div class="step successful">Then temperature is <span class="step parameter">normal</span></div>
 
 <h3 class="example">Example: {patient=2, temperature=43.8, result=high}</h3>
 <div class="step successful">Given a patient is <span class="step parameter">2</span></div>
@@ -70,10 +70,10 @@
 <div class="step successful">When patient temperature is <span class="step parameter">35.2</span></div>
 <div class="step successful">Then temperature is <span class="step parameter">low</span></div>
 
-<h3 class="example">Example: {patient=3, temperature=36.6, result=high}</h3>
+<h3 class="example">Example: {patient=3, temperature=36.6, result=normal}</h3>
 <div class="step successful">Given a patient is <span class="step parameter">3</span></div>
 <div class="step successful">When patient temperature is <span class="step parameter">36.6</span></div>
-<div class="step failed">Then temperature is <span class="step parameter">high</span> <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;[high]&gt; but was:&lt;[normal]&gt;</span></div>
+<div class="step successful">Then temperature is <span class="step parameter">normal</span></div>
 
 <h3 class="example">Example: {patient=3, temperature=38.0, result=high}</h3>
 <div class="step successful">Given a patient is <span class="step parameter">3</span></div>

@@ -11,10 +11,10 @@ Then temperature is <result>
 |1|39.0|normal|
 |1|39.8|high|
 |2|40.0|low|
-|2|42.2|low|
+|2|42.2|normal|
 |2|43.8|high|
 |3|35.2|low|
-|3|36.6|high|
+|3|36.6|normal|
 |3|38.0|high|
 
 Example: {patient=1, temperature=38.0, result=low}
@@ -37,11 +37,10 @@ Given a patient is 2
 When patient temperature is 40.0
 Then temperature is low
 
-Example: {patient=2, temperature=42.2, result=low}
+Example: {patient=2, temperature=42.2, result=normal}
 Given a patient is 2
 When patient temperature is 42.2
-Then temperature is low (FAILED)
-(org.junit.ComparisonFailure: expected:<[low]> but was:<[normal]>)
+Then temperature is normal
 
 Example: {patient=2, temperature=43.8, result=high}
 Given a patient is 2
@@ -53,11 +52,10 @@ Given a patient is 3
 When patient temperature is 35.2
 Then temperature is low
 
-Example: {patient=3, temperature=36.6, result=high}
+Example: {patient=3, temperature=36.6, result=normal}
 Given a patient is 3
 When patient temperature is 36.6
-Then temperature is high (FAILED)
-(org.junit.ComparisonFailure: expected:<[high]> but was:<[normal]>)
+Then temperature is normal
 
 Example: {patient=3, temperature=38.0, result=high}
 Given a patient is 3

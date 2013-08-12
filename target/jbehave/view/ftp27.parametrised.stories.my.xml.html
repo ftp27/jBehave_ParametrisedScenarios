@@ -20,10 +20,10 @@
 <values><value>1</value><value>39.0</value><value>normal</value></values>
 <values><value>1</value><value>39.8</value><value>high</value></values>
 <values><value>2</value><value>40.0</value><value>low</value></values>
-<values><value>2</value><value>42.2</value><value>low</value></values>
+<values><value>2</value><value>42.2</value><value>normal</value></values>
 <values><value>2</value><value>43.8</value><value>high</value></values>
 <values><value>3</value><value>35.2</value><value>low</value></values>
-<values><value>3</value><value>36.6</value><value>high</value></values>
+<values><value>3</value><value>36.6</value><value>normal</value></values>
 <values><value>3</value><value>38.0</value><value>high</value></values>
 </parameters>
 
@@ -47,10 +47,10 @@
 <step outcome="successful">When patient temperature is <parameter>40.0</parameter></step>
 <step outcome="successful">Then temperature is <parameter>low</parameter></step>
 
-<example keyword="Example:">{patient=2, temperature=42.2, result=low}</example>
+<example keyword="Example:">{patient=2, temperature=42.2, result=normal}</example>
 <step outcome="successful">Given a patient is <parameter>2</parameter></step>
 <step outcome="successful">When patient temperature is <parameter>42.2</parameter></step>
-<step outcome="failed" keyword="FAILED">Then temperature is <parameter>low</parameter><failure>org.junit.ComparisonFailure: expected:&lt;[low]&gt; but was:&lt;[normal]&gt;</failure></step>
+<step outcome="successful">Then temperature is <parameter>normal</parameter></step>
 
 <example keyword="Example:">{patient=2, temperature=43.8, result=high}</example>
 <step outcome="successful">Given a patient is <parameter>2</parameter></step>
@@ -62,10 +62,10 @@
 <step outcome="successful">When patient temperature is <parameter>35.2</parameter></step>
 <step outcome="successful">Then temperature is <parameter>low</parameter></step>
 
-<example keyword="Example:">{patient=3, temperature=36.6, result=high}</example>
+<example keyword="Example:">{patient=3, temperature=36.6, result=normal}</example>
 <step outcome="successful">Given a patient is <parameter>3</parameter></step>
 <step outcome="successful">When patient temperature is <parameter>36.6</parameter></step>
-<step outcome="failed" keyword="FAILED">Then temperature is <parameter>high</parameter><failure>org.junit.ComparisonFailure: expected:&lt;[high]&gt; but was:&lt;[normal]&gt;</failure></step>
+<step outcome="successful">Then temperature is <parameter>normal</parameter></step>
 
 <example keyword="Example:">{patient=3, temperature=38.0, result=high}</example>
 <step outcome="successful">Given a patient is <parameter>3</parameter></step>
