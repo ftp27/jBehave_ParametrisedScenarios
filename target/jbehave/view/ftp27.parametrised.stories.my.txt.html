@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>ftp27.parametrised.stories.my</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: txt"><![CDATA[
+
+(ftp27/parametrised/stories/my.story)
+Scenario: A scenario for check temperature table
+Examples:
+Given a patient is <patient>
+When patient temperature is <temperature>
+Then temperature is <result>
+
+|patient|temperature|result|
+|1|38.0|low|
+|1|39.0|normal|
+|1|39.8|high|
+|2|40.0|low|
+|2|42.2|low|
+|2|43.8|high|
+|3|35.2|low|
+|3|36.6|high|
+|3|38.0|high|
+
+Example: {patient=1, temperature=38.0, result=low}
+Given a patient is 1
+When patient temperature is 38.0
+Then temperature is low
+
+Example: {patient=1, temperature=39.0, result=normal}
+Given a patient is 1
+When patient temperature is 39.0
+Then temperature is normal
+
+Example: {patient=1, temperature=39.8, result=high}
+Given a patient is 1
+When patient temperature is 39.8
+Then temperature is high
+
+Example: {patient=2, temperature=40.0, result=low}
+Given a patient is 2
+When patient temperature is 40.0
+Then temperature is low
+
+Example: {patient=2, temperature=42.2, result=low}
+Given a patient is 2
+When patient temperature is 42.2
+Then temperature is low (FAILED)
+(org.junit.ComparisonFailure: expected:<[low]> but was:<[normal]>)
+
+Example: {patient=2, temperature=43.8, result=high}
+Given a patient is 2
+When patient temperature is 43.8
+Then temperature is high
+
+Example: {patient=3, temperature=35.2, result=low}
+Given a patient is 3
+When patient temperature is 35.2
+Then temperature is low
+
+Example: {patient=3, temperature=36.6, result=high}
+Given a patient is 3
+When patient temperature is 36.6
+Then temperature is high (FAILED)
+(org.junit.ComparisonFailure: expected:<[high]> but was:<[normal]>)
+
+Example: {patient=3, temperature=38.0, result=high}
+Given a patient is 3
+When patient temperature is 38.0
+Then temperature is high
+
+
+
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

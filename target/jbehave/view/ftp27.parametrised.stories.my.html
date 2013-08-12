@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>ftp27.parametrised.stories.my</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1></h1>
+<div class="path">ftp27/parametrised/stories/my.story</div>
+<div class="scenario">
+<h2>Scenario: A scenario for check temperature table</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given a patient is &lt;patient&gt;</div>
+<div class="step">When patient temperature is &lt;temperature&gt;</div>
+<div class="step">Then temperature is &lt;result&gt;</div>
+<table>
+<thead>
+<tr>
+<th>patient</th><th>temperature</th><th>result</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td><td>38.0</td><td>low</td></tr>
+<tr>
+<td>1</td><td>39.0</td><td>normal</td></tr>
+<tr>
+<td>1</td><td>39.8</td><td>high</td></tr>
+<tr>
+<td>2</td><td>40.0</td><td>low</td></tr>
+<tr>
+<td>2</td><td>42.2</td><td>low</td></tr>
+<tr>
+<td>2</td><td>43.8</td><td>high</td></tr>
+<tr>
+<td>3</td><td>35.2</td><td>low</td></tr>
+<tr>
+<td>3</td><td>36.6</td><td>high</td></tr>
+<tr>
+<td>3</td><td>38.0</td><td>high</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {patient=1, temperature=38.0, result=low}</h3>
+<div class="step successful">Given a patient is <span class="step parameter">1</span></div>
+<div class="step successful">When patient temperature is <span class="step parameter">38.0</span></div>
+<div class="step successful">Then temperature is <span class="step parameter">low</span></div>
+
+<h3 class="example">Example: {patient=1, temperature=39.0, result=normal}</h3>
+<div class="step successful">Given a patient is <span class="step parameter">1</span></div>
+<div class="step successful">When patient temperature is <span class="step parameter">39.0</span></div>
+<div class="step successful">Then temperature is <span class="step parameter">normal</span></div>
+
+<h3 class="example">Example: {patient=1, temperature=39.8, result=high}</h3>
+<div class="step successful">Given a patient is <span class="step parameter">1</span></div>
+<div class="step successful">When patient temperature is <span class="step parameter">39.8</span></div>
+<div class="step successful">Then temperature is <span class="step parameter">high</span></div>
+
+<h3 class="example">Example: {patient=2, temperature=40.0, result=low}</h3>
+<div class="step successful">Given a patient is <span class="step parameter">2</span></div>
+<div class="step successful">When patient temperature is <span class="step parameter">40.0</span></div>
+<div class="step successful">Then temperature is <span class="step parameter">low</span></div>
+
+<h3 class="example">Example: {patient=2, temperature=42.2, result=low}</h3>
+<div class="step successful">Given a patient is <span class="step parameter">2</span></div>
+<div class="step successful">When patient temperature is <span class="step parameter">42.2</span></div>
+<div class="step failed">Then temperature is <span class="step parameter">low</span> <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;[low]&gt; but was:&lt;[normal]&gt;</span></div>
+
+<h3 class="example">Example: {patient=2, temperature=43.8, result=high}</h3>
+<div class="step successful">Given a patient is <span class="step parameter">2</span></div>
+<div class="step successful">When patient temperature is <span class="step parameter">43.8</span></div>
+<div class="step successful">Then temperature is <span class="step parameter">high</span></div>
+
+<h3 class="example">Example: {patient=3, temperature=35.2, result=low}</h3>
+<div class="step successful">Given a patient is <span class="step parameter">3</span></div>
+<div class="step successful">When patient temperature is <span class="step parameter">35.2</span></div>
+<div class="step successful">Then temperature is <span class="step parameter">low</span></div>
+
+<h3 class="example">Example: {patient=3, temperature=36.6, result=high}</h3>
+<div class="step successful">Given a patient is <span class="step parameter">3</span></div>
+<div class="step successful">When patient temperature is <span class="step parameter">36.6</span></div>
+<div class="step failed">Then temperature is <span class="step parameter">high</span> <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;[high]&gt; but was:&lt;[normal]&gt;</span></div>
+
+<h3 class="example">Example: {patient=3, temperature=38.0, result=high}</h3>
+<div class="step successful">Given a patient is <span class="step parameter">3</span></div>
+<div class="step successful">When patient temperature is <span class="step parameter">38.0</span></div>
+<div class="step successful">Then temperature is <span class="step parameter">high</span></div>
+</div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
