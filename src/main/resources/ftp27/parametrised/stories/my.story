@@ -16,3 +16,4 @@ Examples:
 |3|35.2|low|
 |3|36.6|normal|
 |3|38.0|high|
+|3|36.7|normal|
